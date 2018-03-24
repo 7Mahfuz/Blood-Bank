@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blood Bank", "Blood Bank\Blood Bank.csproj", "{9426CE15-819F-485F-A6F8-B9B8F34BC335}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{BC176F4B-4BE5-44E6-B16B-151239230910}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{CD7754A4-F48A-4C63-8E15-B878C21AB1A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9426CE15-819F-485F-A6F8-B9B8F34BC335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9426CE15-819F-485F-A6F8-B9B8F34BC335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9426CE15-819F-485F-A6F8-B9B8F34BC335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9426CE15-819F-485F-A6F8-B9B8F34BC335}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC176F4B-4BE5-44E6-B16B-151239230910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC176F4B-4BE5-44E6-B16B-151239230910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC176F4B-4BE5-44E6-B16B-151239230910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC176F4B-4BE5-44E6-B16B-151239230910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD7754A4-F48A-4C63-8E15-B878C21AB1A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD7754A4-F48A-4C63-8E15-B878C21AB1A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD7754A4-F48A-4C63-8E15-B878C21AB1A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD7754A4-F48A-4C63-8E15-B878C21AB1A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17329679-CA3E-4421-AF07-904021164065}
+	EndGlobalSection
+EndGlobal

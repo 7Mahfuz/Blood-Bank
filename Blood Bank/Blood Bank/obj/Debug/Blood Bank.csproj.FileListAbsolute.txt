@@ -1,0 +1,77 @@
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\ApplicationInsights.config
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Blood Bank.dll.config
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Blood Bank.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Blood Bank.pdb
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Antlr3.Runtime.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\EntityFramework.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\EntityFramework.SqlServer.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AI.Agent.Intercept.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AI.DependencyCollector.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AI.PerfCounterCollector.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AI.ServerTelemetryChannel.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AI.Web.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AI.WindowsServer.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.ApplicationInsights.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AspNet.Identity.Core.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Owin.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Owin.Security.Cookies.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Owin.Security.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Owin.Security.Facebook.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Owin.Security.Google.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Owin.Security.OAuth.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Owin.Security.Twitter.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Web.Infrastructure.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Newtonsoft.Json.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Owin.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Net.Http.Formatting.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Web.Helpers.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Web.Http.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Web.Http.WebHost.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Web.Mvc.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Web.Optimization.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Web.Razor.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Web.WebPages.Deployment.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Web.WebPages.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Web.WebPages.Razor.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\WebGrease.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Web.Helpers.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Web.Mvc.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Web.Optimization.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Web.Razor.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Web.WebPages.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Web.WebPages.Deployment.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Web.WebPages.Razor.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Antlr3.Runtime.pdb
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Newtonsoft.Json.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Net.Http.Formatting.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Web.Http.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\System.Web.Http.WebHost.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\EntityFramework.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\EntityFramework.SqlServer.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AspNet.Identity.Core.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Owin.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Owin.Security.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Owin.Security.Facebook.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Owin.Security.Cookies.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Owin.Security.OAuth.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Owin.Security.Google.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Owin.Security.Twitter.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.ApplicationInsights.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AI.DependencyCollector.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AI.ServerTelemetryChannel.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AI.WindowsServer.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AI.Web.xml
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\obj\Debug\Blood Bank.csprojResolveAssemblyReference.cache
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\obj\Debug\Blood Bank.csproj.CoreCompileInputs.cache
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\obj\Debug\Blood Bank.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\obj\Debug\Blood Bank.pdb

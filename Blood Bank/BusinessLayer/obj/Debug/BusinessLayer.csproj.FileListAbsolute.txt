@@ -1,0 +1,6 @@
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\BusinessLayer\bin\Debug\BusinessLayer.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\BusinessLayer\bin\Debug\BusinessLayer.pdb
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\BusinessLayer\obj\Debug\BusinessLayer.dll
+G:\Pros\Blood Donors\Blood-Bank\Blood Bank\BusinessLayer\obj\Debug\BusinessLayer.pdb
