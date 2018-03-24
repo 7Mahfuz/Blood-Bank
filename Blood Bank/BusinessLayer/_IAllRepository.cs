@@ -15,6 +15,7 @@ namespace BusinessLayer
         void InsertModel(T model);
         void UpdateModel(T model);
         void DeleteModel(T model);
+        void Save();
         
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -8,6 +9,7 @@ namespace Blood_Bank.Models
 {
     public class BloodBankContext: DbContext
     {
-
+        public DbSet<User> User { get; set; }
+      
     }
 }

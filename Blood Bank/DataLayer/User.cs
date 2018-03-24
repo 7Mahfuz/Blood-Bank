@@ -19,9 +19,13 @@ namespace DataLayer
         public string Email { get; set; }
        
         public string Blood { get; set; }
+
+        [DataType(DataType.Date)]
         public string LastDonated { get; set; }
 
         public string PreferedArea { get; set; }
+
+        [DataType(DataType.Date)]
         public DateTime BirthDate { get; set; }
         
         public string PhoneNumber { get; set; }
