@@ -35,7 +35,8 @@ namespace BusinessLayer
 
         public void InsertModel(T model)
         {
-            throw new NotImplementedException();
+            _DbSet.Add(model);
+           
         }
 
         public void UpdateModel(T model)
