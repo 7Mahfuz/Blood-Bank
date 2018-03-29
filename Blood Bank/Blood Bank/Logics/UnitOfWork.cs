@@ -1,22 +1,26 @@
-﻿using Blood_Bank.Models;
+﻿
+using DataLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLayer
+namespace Blood_Bank.Logics
 {
     public class UnitOfWork :IDisposable
     {
-       private BloodBankContext context = null;
+       
 
-public UnitOfWork()
+        private BloodBankContext context = null;
+
+        public UnitOfWork()
         {
             context = new BloodBankContext();
         }
 
         public Dictionary<Type, object> repositories = new Dictionary<Type, object>();
+
         public _IAllRepository<T> Repository<T>() where T : class
         {
             if (repositories.Keys.Contains(typeof(T)) == true)
@@ -27,7 +31,6 @@ public UnitOfWork()
             repositories.Add(typeof(T), repo);
             return repo;
         }
-
         public void Save()
         {
             context.SaveChanges();
@@ -54,3 +57,20 @@ public UnitOfWork()
 
     }
     }
+
+
+//private BloodBankContext context = new BloodBankContext();
+// private AllRepository<User> userRepository;
+
+// public AllRepository<User> UserRepository
+// {
+//     get
+//     {
+
+//         if (this.userRepository == null)
+//         {
+//             this.userRepository = new AllRepository<User>(context);
+//         }
+//         return userRepository;
+//     }
+// }

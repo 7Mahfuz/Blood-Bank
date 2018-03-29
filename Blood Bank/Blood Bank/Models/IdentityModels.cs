@@ -21,7 +21,7 @@ namespace Blood_Bank.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("BloodBankContext", throwIfV1Schema: false)
         {
         }
 

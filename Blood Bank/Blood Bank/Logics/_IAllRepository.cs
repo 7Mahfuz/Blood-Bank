@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLayer
+namespace Blood_Bank.Logics
 {
     public interface _IAllRepository<T> where T:class
     {
@@ -15,7 +15,7 @@ namespace BusinessLayer
         void InsertModel(T model);
         void UpdateModel(T model);
         void DeleteModel(T model);
-        void Save();
+        
         
     }
 }

@@ -1,5 +1,4 @@
-﻿using Blood_Bank.Models;
-using Blood_Bank;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,49 +8,51 @@ using System.Data.Entity;
 using System.Threading.Tasks;
 
 
-namespace BusinessLayer
+namespace Blood_Bank.Logics
 {
-    public class AllRepository<T> : _IAllRepository<T> where T:class 
+    public class AllRepository<T> : _IAllRepository<T> where T: class //
     {
-        private BloodBankContext _context = null;
-        private IDbSet<T> _DbSet;
+       internal BloodBankContext _context;
+       internal DbSet<T> _DbSet;
         
         public AllRepository(BloodBankContext context)
         {
-            _context = context;
-            _DbSet = _context.Set<T>();
+            this._context = context;
+            this._DbSet = _context.Set<T>();
         }
 
 
         public IEnumerable<T> GetList(Func<T, bool> predicate = null)
         {
-            throw new NotImplementedException();
+            if (predicate != null)
+            {
+                return _DbSet.Where(predicate);
+            }
+            else return _DbSet.AsEnumerable();
         }
 
         public T GetModelById(int ModelId)
         {
-            throw new NotImplementedException();
+            return _DbSet.Find(ModelId);
         }
 
         public void InsertModel(T model)
         {
             _DbSet.Add(model);
            
+           
         }
 
         public void UpdateModel(T model)
         {
-            throw new NotImplementedException();
+            _context.Entry(model).State = System.Data.Entity.EntityState.Modified;
         }
 
         public void DeleteModel(T model)
         {
-            throw new NotImplementedException();
+            _DbSet.Remove(model);
         }
 
-        public void Save()
-        {
-
-        }
+        
     }
 }

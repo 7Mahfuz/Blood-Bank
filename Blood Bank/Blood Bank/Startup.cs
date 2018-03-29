@@ -1,5 +1,7 @@
-﻿using Microsoft.Owin;
+﻿using DataLayer;
+using Microsoft.Owin;
 using Owin;
+using System.Data.Entity;
 
 [assembly: OwinStartupAttribute(typeof(Blood_Bank.Startup))]
 namespace Blood_Bank
@@ -9,6 +11,7 @@ namespace Blood_Bank
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+           // Database.SetInitializer<User>(null);
         }
     }
 }

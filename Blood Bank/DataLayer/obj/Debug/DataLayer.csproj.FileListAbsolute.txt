@@ -6,7 +6,6 @@ G:\Pros\Blood Donors\Blood-Bank\Blood Bank\DataLayer\obj\Debug\DataLayer.dll
 G:\Pros\Blood Donors\Blood-Bank\Blood Bank\DataLayer\obj\Debug\DataLayer.pdb
 H:\Pros\Blood Donors\Blood-Bank\Blood Bank\DataLayer\bin\Debug\DataLayer.dll
 H:\Pros\Blood Donors\Blood-Bank\Blood Bank\DataLayer\bin\Debug\DataLayer.pdb
-H:\Pros\Blood Donors\Blood-Bank\Blood Bank\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
 H:\Pros\Blood Donors\Blood-Bank\Blood Bank\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
 H:\Pros\Blood Donors\Blood-Bank\Blood Bank\DataLayer\obj\Debug\DataLayer.dll
 H:\Pros\Blood Donors\Blood-Bank\Blood Bank\DataLayer\obj\Debug\DataLayer.pdb

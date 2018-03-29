@@ -75,6 +75,8 @@ G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\obj\Debug\Blood Bank.cspro
 G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\obj\Debug\Blood Bank.csproj.CoreCompileInputs.cache
 G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\obj\Debug\Blood Bank.dll
 G:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\obj\Debug\Blood Bank.pdb
+H:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\obj\Debug\Blood Bank.csprojResolveAssemblyReference.cache
+H:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\obj\Debug\Blood Bank.csproj.CoreCompileInputs.cache
 H:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\ApplicationInsights.config
 H:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Blood Bank.dll.config
 H:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Blood Bank.dll
@@ -150,8 +152,8 @@ H:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AI.Dependenc
 H:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AI.ServerTelemetryChannel.xml
 H:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AI.WindowsServer.xml
 H:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\bin\Microsoft.AI.Web.xml
-H:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\obj\Debug\Blood Bank.csprojResolveAssemblyReference.cache
-H:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\obj\Debug\Blood Bank.csproj.CoreCompileInputs.cache
 H:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\obj\Debug\Blood Bank.csproj.CopyComplete
 H:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\obj\Debug\Blood Bank.dll
 H:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\obj\Debug\Blood Bank.pdb
+H:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\obj\Debug\Blood_Bank.Migrations.Test1.resources
+H:\Pros\Blood Donors\Blood-Bank\Blood Bank\Blood Bank\obj\Debug\Blood Bank.csproj.GenerateResource.cache

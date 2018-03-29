@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blood Bank", "Blood Bank\Bl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{BC176F4B-4BE5-44E6-B16B-151239230910}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{CD7754A4-F48A-4C63-8E15-B878C21AB1A2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{BC176F4B-4BE5-44E6-B16B-151239230910}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC176F4B-4BE5-44E6-B16B-151239230910}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC176F4B-4BE5-44E6-B16B-151239230910}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CD7754A4-F48A-4C63-8E15-B878C21AB1A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CD7754A4-F48A-4C63-8E15-B878C21AB1A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CD7754A4-F48A-4C63-8E15-B878C21AB1A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CD7754A4-F48A-4C63-8E15-B878C21AB1A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
