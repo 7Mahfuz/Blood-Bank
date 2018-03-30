@@ -15,7 +15,8 @@ namespace Blood_Bank.Logics
         void InsertModel(T model);
         void UpdateModel(T model);
         void DeleteModel(T model);
-        
-        
+        int Count(Func<T, bool> predicate = null);
+        T GetModel(Func<T, bool> predicate = null);
+
     }
 }

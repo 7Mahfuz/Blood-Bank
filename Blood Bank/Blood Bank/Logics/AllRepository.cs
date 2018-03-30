@@ -35,7 +35,11 @@ namespace Blood_Bank.Logics
         {
             return _DbSet.Find(ModelId);
         }
+        public T GetModel(Func<T, bool> predicate = null)
+        {
 
+            return _DbSet.FirstOrDefault(predicate);
+        }
         public void InsertModel(T model)
         {
             _DbSet.Add(model);
@@ -53,6 +57,12 @@ namespace Blood_Bank.Logics
             _DbSet.Remove(model);
         }
 
+        public int Count(Func<T, bool> predicate = null)
+        {
+            int x = _DbSet.Count(predicate);
+            return x;
+        }
         
+
     }
 }

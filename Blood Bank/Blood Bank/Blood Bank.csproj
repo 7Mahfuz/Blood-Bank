@@ -202,6 +202,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RequestController.cs" />
+    <Compile Include="Controllers\UserAccountController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -213,6 +215,10 @@
     <Compile Include="Migrations\201803290244004_Test1.cs" />
     <Compile Include="Migrations\201803290244004_Test1.Designer.cs">
       <DependentUpon>201803290244004_Test1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803300835366_Test2.cs" />
+    <Compile Include="Migrations\201803300835366_Test2.Designer.cs">
+      <DependentUpon>201803300835366_Test2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -279,9 +285,12 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\User\Register.cshtml" />
+    <Content Include="Views\UserAccount\Register.cshtml" />
+    <Content Include="Views\UserAccount\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Request\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -305,6 +314,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201803290244004_Test1.resx">
       <DependentUpon>201803290244004_Test1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803300835366_Test2.resx">
+      <DependentUpon>201803300835366_Test2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
