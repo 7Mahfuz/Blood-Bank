@@ -297,10 +297,13 @@
     <Content Include="Views\DonateList\Index.cshtml" />
     <Content Include="Views\DonateList\Edit.cshtml" />
     <Content Include="Views\DonateList\Delete.cshtml" />
+    <Content Include="Views\Request\Add.cshtml" />
+    <Content Include="Views\Request\Delete.cshtml" />
+    <Content Include="Views\Request\Edit.cshtml" />
+    <Content Include="Views\Request\AllRequests.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Request\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
