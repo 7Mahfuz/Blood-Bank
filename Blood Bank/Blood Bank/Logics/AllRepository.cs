@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Threading.Tasks;
 
 
@@ -12,12 +13,12 @@ namespace Blood_Bank.Logics
 {
     public class AllRepository<T> : _IAllRepository<T> where T: class //
     {
-       internal BloodBankContext _context;
-       internal DbSet<T> _DbSet;
+       private BloodBankContext context;
+       private DbSet<T> _DbSet;
         
-        public AllRepository(BloodBankContext context)
+        public AllRepository(BloodBankContext _context)
         {
-            this._context = context;
+            context = _context;
             this._DbSet = _context.Set<T>();
         }
 
@@ -43,13 +44,14 @@ namespace Blood_Bank.Logics
         public void InsertModel(T model)
         {
             _DbSet.Add(model);
-           
+            
            
         }
 
         public void UpdateModel(T model)
         {
-            _context.Entry(model).State = System.Data.Entity.EntityState.Modified;
+            context.Set<T>().AddOrUpdate(model);
+           // context.Entry(model).State = System.Data.Entity.EntityState.Modified;
         }
 
         public void DeleteModel(T model)

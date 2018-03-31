@@ -42,11 +42,24 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Blood, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Blood, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Blood, "", new { @class = "text-danger" })
-            </div>
-        </div>
+               
+                    @Html.DropDownListFor(model => model.Blood, new List<SelectListItem>
+{
+new SelectListItem{ Text="A(+) positive", Value = "A(+) positive" },
+new SelectListItem{ Text="A(-) negative", Value = "A(-) negative" },
+new SelectListItem{ Text="B(+) positive", Value = "B(+) positive" },
+new SelectListItem{ Text="B(-) negative", Value = "B(-) negative" },
+new SelectListItem{ Text="AB(+) positive", Value = "AB(+) positive" },
+new SelectListItem{ Text="AB(-) negative", Value = "AB(-) negative" },
+new SelectListItem{ Text="O(+) positive", Value = "O(+) positive" },
+new SelectListItem{ Text="O(-) negative", Value = "O(-) negative" },
 
+},  new { @class = "form-control" } )
+                
+                    @Html.ValidationMessageFor(model => model.Blood, "", new { @class = "text-danger" })
+             </div>
+        </div>
+           
         <div class="form-group">
             @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -69,6 +82,7 @@
             </div>
         </div>
     </div>
+       
 }
 
 <div>

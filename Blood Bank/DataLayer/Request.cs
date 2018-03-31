@@ -13,7 +13,7 @@ namespace DataLayer
         public int id { get; set; }
 
         public int UserId { get; set; }
-        public User User { get; set; }
+        
 
         public string Blood { get; set; }
 
@@ -21,7 +21,12 @@ namespace DataLayer
 
         public int GotOrNot { get; set; }
 
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime PostDate { get; set; }
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime BloodNeed { get; set; }
 
     }

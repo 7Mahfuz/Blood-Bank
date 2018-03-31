@@ -1,0 +1,106 @@
+﻿@model DataLayer.User
+
+@{
+    ViewBag.Title = "UserDetail";
+}
+
+<h2>UserDetail</h2>
+@Html.HiddenFor(model=>model.Id)
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Blood)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Blood)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastDonated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastDonated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreferedArea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreferedArea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OtherNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtherNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Relation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Relation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Update", "Update", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

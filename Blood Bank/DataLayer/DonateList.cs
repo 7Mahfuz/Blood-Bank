@@ -13,11 +13,14 @@ namespace DataLayer
         public int id { get; set; }
 
         public int UserId { get; set; }
-        public User User { get; set; }
+        
 
         public string Reciever { get; set; }
         public string Disease { get; set; }
         public string Hospital { get; set; }
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime Date { get; set; }
     }
 }

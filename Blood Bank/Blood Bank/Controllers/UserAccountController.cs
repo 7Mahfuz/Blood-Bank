@@ -34,8 +34,8 @@ namespace Blood_Bank.Controllers
                 User user = uow.Repository<User>().GetModel(x=>x.UserName==model.UserName);
                 if (model.Password == user.Password)
                 {
-                    Session["MemberName"] = model.UserName;
-                    Response.Cookies["MemberName"].Value = model.UserName;
+                    Session["UserName"] = model.UserName;
+                    Response.Cookies["UserName"].Value = model.UserName;
                     return RedirectToAction("Index", "Home");
                 }
                 else return View(model);
@@ -80,8 +80,8 @@ namespace Blood_Bank.Controllers
 
                     uow.Repository<User>().InsertModel(user);
                     uow.Save();
-                    Session["MemberName"] = user.UserName;
-                    Response.Cookies["MemberName"].Value = user.UserName;
+                    Session["UserName"] = user.UserName;
+                    Response.Cookies["UserName"].Value = user.UserName;
                    // Response.Cookies["MemberRole"].Value = "User";
                     return RedirectToAction("Index", "Home");
                                         
@@ -94,8 +94,8 @@ namespace Blood_Bank.Controllers
 
         public ActionResult Logout()
         {
-            Session["MemberName"] = null;
-            Response.Cookies["MemberName"].Value = null;
+            Session["UserName"] = null;
+            Response.Cookies["UserName"].Value = null;
             return RedirectToAction("Index", "Home");
         }
 

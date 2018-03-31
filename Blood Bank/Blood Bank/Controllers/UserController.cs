@@ -9,8 +9,9 @@ using DataLayer;
 
 namespace Blood_Bank.Controllers
 {
-    public class UserController : Controller
+      public class UserController : Controller
     {
+        
         private UnitOfWork uow = null;
         public UserController()
         {
@@ -21,30 +22,35 @@ namespace Blood_Bank.Controllers
             this.uow = _uow;
         }
         // GET: User
-        public ActionResult Index()
+        public ActionResult UserDetail()
         {
-            uow.Repository<User>().GetList();
-            return View();
+            if (Session["UserName"] != null)
+            {
+                string Username = Session["UserName"].ToString();
+                User user = uow.Repository<User>().GetModel(x => x.UserName == Username);
+                return View(user);
+            }
+            else return RedirectToAction("Login", "UserAccount");
         }
 
-        public ActionResult Register()
+        public ActionResult Update()
         {
-            return View();
+            string Username = Session["UserName"].ToString();
+            User user = uow.Repository<User>().GetModel(x => x.UserName == Username);
+            return View(user);
         }
-
         [HttpPost]
-        public ActionResult Register(User model)
+        public ActionResult Update(int id,User model)
         {
-            //try
-            //{
-                uow.Repository<User>().InsertModel(model);
-                uow.Save();
-                return View();
-            //}
-            //catch
-            //{
-            //    return View();
-            //}
+            User user= uow.Repository<User>().GetModelById(id);
+            string pass = user.Password;
+            user = model;
+            user.Password = pass;
+            //BloodBankContext context = new BloodBankContext();
+            //context.Entry(user).State = System.Data.Entity.EntityState.Modified;
+            uow.Repository<User>().UpdateModel(model);
+            uow.Save();
+            return View();
         }
 
 
