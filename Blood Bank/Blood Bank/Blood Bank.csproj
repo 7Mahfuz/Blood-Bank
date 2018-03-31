@@ -295,6 +295,8 @@
     <Content Include="Views\User\Update.cshtml" />
     <Content Include="Views\DonateList\Add.cshtml" />
     <Content Include="Views\DonateList\Index.cshtml" />
+    <Content Include="Views\DonateList\Edit.cshtml" />
+    <Content Include="Views\DonateList\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

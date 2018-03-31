@@ -56,6 +56,7 @@ namespace Blood_Bank.Logics
 
         public void DeleteModel(T model)
         {
+            _DbSet.Attach(model);
             _DbSet.Remove(model);
         }
 
