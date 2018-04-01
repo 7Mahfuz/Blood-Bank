@@ -20,14 +20,31 @@ namespace Blood_Bank.Controllers
             this.uow = _uow;
         }
         // GET: Request
-        public ActionResult AllRequests(int id)
+        public ActionResult AllRequests()
         {
             //string UserName = Session["UserName"].ToString();
             //User user = uow.Repository<User>().GetModel(x => x.UserName == UserName);
-            var model = uow.Repository<Request>().GetList(x=>x.UserId==id);
+            var model = uow.Repository<Request>().GetList();
             return View(model);
         }
 
+        public ActionResult MyRequests(int? id)
+        {
+            string UserName = Session["UserName"].ToString();
+            User user = uow.Repository<User>().GetModel(x => x.UserName == UserName);
+            if(id==null)
+            {
+                var model = uow.Repository<Request>().GetList(x => x.UserId == user.Id);
+                return View(model);
+            }
+            else
+            {
+                var model = uow.Repository<Request>().GetList(x => x.UserId == id);
+                return View(model);
+            }
+            
+            
+        }
         public ActionResult Add()
         {
             return View();
@@ -39,10 +56,11 @@ namespace Blood_Bank.Controllers
             User user = uow.Repository<User>().GetModel(x => x.UserName == UserName);
 
             model.UserId = user.Id;
+            model.PostDate = DateTime.Today;
             uow.Repository<Request>().InsertModel(model);
             uow.Save();
 
-            return RedirectToAction("AllRequests", new { model.id });
+            return RedirectToAction("MyRequests", new { user.Id });
         }
 
 
@@ -54,9 +72,13 @@ namespace Blood_Bank.Controllers
         [HttpPost]
         public ActionResult Edit(Request model)
         {
+            string UserName = Session["UserName"].ToString();
+            User user = uow.Repository<User>().GetModel(x => x.UserName == UserName);
+            model.UserId = user.Id;
+            model.PostDate = DateTime.Today;
             uow.Repository<Request>().UpdateModel(model);
             uow.Save();
-            return RedirectToAction("AllRequests", new { model.id });
+            return RedirectToAction("MyRequests", new { user.Id});
         }
 
 
@@ -68,9 +90,11 @@ namespace Blood_Bank.Controllers
         [HttpPost]
         public ActionResult Delete(Request model)
         {
+            string UserName = Session["UserName"].ToString();
+            User user = uow.Repository<User>().GetModel(x => x.UserName == UserName);
             uow.Repository<Request>().DeleteModel(model);
             uow.Save();
-            return RedirectToAction("AllRequests", new { model.id });
+            return RedirectToAction("MyRequests", new { user.Id });
         }
     }
 }

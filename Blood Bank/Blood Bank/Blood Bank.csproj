@@ -213,17 +213,13 @@
     <Compile Include="Logics\BloodBankContext.cs" />
     <Compile Include="Logics\UnitOfWork.cs" />
     <Compile Include="Logics\_IAllRepository.cs" />
-    <Compile Include="Migrations\201803290244004_Test1.cs" />
-    <Compile Include="Migrations\201803290244004_Test1.Designer.cs">
-      <DependentUpon>201803290244004_Test1.cs</DependentUpon>
+    <Compile Include="Migrations\201804010320275_BloodBank1.cs" />
+    <Compile Include="Migrations\201804010320275_BloodBank1.Designer.cs">
+      <DependentUpon>201804010320275_BloodBank1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803300835366_Test2.cs" />
-    <Compile Include="Migrations\201803300835366_Test2.Designer.cs">
-      <DependentUpon>201803300835366_Test2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803310351025_Test3.cs" />
-    <Compile Include="Migrations\201803310351025_Test3.Designer.cs">
-      <DependentUpon>201803310351025_Test3.cs</DependentUpon>
+    <Compile Include="Migrations\201804010422031_BloodBank2.cs" />
+    <Compile Include="Migrations\201804010422031_BloodBank2.Designer.cs">
+      <DependentUpon>201804010422031_BloodBank2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -301,6 +297,8 @@
     <Content Include="Views\Request\Delete.cshtml" />
     <Content Include="Views\Request\Edit.cshtml" />
     <Content Include="Views\Request\AllRequests.cshtml" />
+    <Content Include="Views\Request\MyRequests.cshtml" />
+    <Content Include="Views\UserAccount\ChangePassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -325,14 +323,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803290244004_Test1.resx">
-      <DependentUpon>201803290244004_Test1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201804010320275_BloodBank1.resx">
+      <DependentUpon>201804010320275_BloodBank1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803300835366_Test2.resx">
-      <DependentUpon>201803300835366_Test2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803310351025_Test3.resx">
-      <DependentUpon>201803310351025_Test3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201804010422031_BloodBank2.resx">
+      <DependentUpon>201804010422031_BloodBank2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

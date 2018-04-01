@@ -1,15 +1,17 @@
 ﻿@model IEnumerable<DataLayer.Request>
 
 @{
-    ViewBag.Title = "AllRequests";
+    ViewBag.Title = "MyRequests";
 }
 
-<h2>AllRequests</h2>
+<h2>MyRequests</h2>
 
-
+<p>
+    @Html.ActionLink("Make another Requset", "Add")
+</p>
 <table class="table">
     <tr>
-        \
+        
         <th>
             @Html.DisplayNameFor(model => model.Blood)
         </th>
@@ -30,7 +32,7 @@
 
 @foreach (var item in Model) {
     <tr>
-        
+       
         <td>
             @Html.DisplayFor(modelItem => item.Blood)
         </td>
@@ -47,9 +49,9 @@
             @Html.DisplayFor(modelItem => item.BloodNeed)
         </td>
         <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
             
-            @Html.ActionLink("Details", "Details", new { id=item.id })|
-           
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
         </td>
     </tr>
 }

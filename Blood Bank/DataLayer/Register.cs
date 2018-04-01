@@ -14,7 +14,9 @@ namespace DataLayer
         [DataType(DataType.Date)]
         public DateTime Birthdate { get; set; }
         public string Blood { get; set; }
+        [DataType(DataType.Password)]
         public string Password { get; set; }
+        [DataType(DataType.Password)]
         public string Confirmpassword { get; set; }
 
     }

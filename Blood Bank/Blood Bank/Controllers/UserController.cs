@@ -21,6 +21,12 @@ namespace Blood_Bank.Controllers
         {
             this.uow = _uow;
         }
+
+        public ActionResult UserDetailExternal(int id)
+        {
+            return View();
+        }
+
         // GET: User
         public ActionResult UserDetail()
         {
@@ -50,9 +56,9 @@ namespace Blood_Bank.Controllers
             //context.Entry(user).State = System.Data.Entity.EntityState.Modified;
             uow.Repository<User>().UpdateModel(model);
             uow.Save();
-            return View();
+            return RedirectToAction("UserDetail");
         }
 
-
+       
     }
 }

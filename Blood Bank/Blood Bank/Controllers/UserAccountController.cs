@@ -72,8 +72,8 @@ namespace Blood_Bank.Controllers
                     user.Blood = model.Blood;
                     user.BirthDate = model.Birthdate;
                     user.PhoneNumber = "Not Added";
-                    user.OtherNumber = "Not Added";
-                    user.Relation = "Not Added";
+                    user.RelativePhoneNumber = "Not Added";
+                    user.Relative = "Not Added";
                     user.PreferedArea = "Not Added";
                     user.LastDonated = null;
                     user.Password = model.Password;
@@ -97,6 +97,36 @@ namespace Blood_Bank.Controllers
             Session["UserName"] = null;
             Response.Cookies["UserName"].Value = null;
             return RedirectToAction("Index", "Home");
+        }
+
+
+        public ActionResult ChangePassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult ChangePassword(ChangePassword model)
+        {
+            int a = uow.Repository<User>().Count(x => x.UserName == model.UserName);
+            if(a>0)
+            {
+                User user = uow.Repository<User>().GetModel(x => x.UserName == model.UserName);
+                if(user.Email==model.Email)
+                {
+                    if(model.Password==model.ConfirmPassword)
+                    {
+                        user.Password = model.Password;
+                        uow.Repository<User>().UpdateModel(user);
+                        uow.Save();
+                    }
+                }
+            }
+            else
+            {
+
+            }
+
+            return View(model);
         }
 
     }

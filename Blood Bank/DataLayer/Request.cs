@@ -13,13 +13,14 @@ namespace DataLayer
         public int id { get; set; }
 
         public int UserId { get; set; }
-        
+
 
         public string Blood { get; set; }
 
+        [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
-        public int GotOrNot { get; set; }
+        public string GotBlood { get; set; }
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]

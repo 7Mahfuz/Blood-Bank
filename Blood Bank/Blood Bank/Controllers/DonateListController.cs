@@ -20,7 +20,7 @@ namespace Blood_Bank.Controllers
             this.uow = _uow;
         }
         // GET: DonateList
-        public ActionResult Index(int id)
+        public ActionResult Index(int? id)
         {
             string UserName = Session["UserName"].ToString();
             User user = uow.Repository<User>().GetModel(x => x.UserName == UserName);
@@ -28,8 +28,17 @@ namespace Blood_Bank.Controllers
             { ViewBag.Same = "Yes"; }
             else { ViewBag.Same = "No"; }
 
-            var model=uow.Repository<DonateList>().GetList(x=>x.UserId==id);
-            return View(model);
+            if(id==null)
+            {
+                var model = uow.Repository<DonateList>().GetList(x => x.UserId == user.Id);
+                return View(model);
+            }
+            else
+            {
+                var model = uow.Repository<DonateList>().GetList(x => x.UserId == id);
+                return View(model);
+            }
+            
         }
 
         public ActionResult Add()
@@ -56,6 +65,9 @@ namespace Blood_Bank.Controllers
         [HttpPost]
         public ActionResult Edit(int id,DonateList model)
         {
+            string UserName = Session["UserName"].ToString();
+            User user = uow.Repository<User>().GetModel(x => x.UserName == UserName);
+            model.UserId = user.Id;
             uow.Repository<DonateList>().UpdateModel(model);
             uow.Save();
             return RedirectToAction("Index", "DonateList", new { id = model.id });
