@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using PagedList.Mvc;
+using PagedList;
 namespace Blood_Bank.Controllers
 {
     public class DonateListController : Controller
@@ -19,6 +19,15 @@ namespace Blood_Bank.Controllers
         {
             this.uow = _uow;
         }
+
+        public ActionResult DonorList(int? page)
+        {
+            var model = uow.Repository<User>().GetList();
+            var obj = model.ToList().ToPagedList(page ?? 1, 10);
+            return View(obj);
+        }
+
+
         // GET: DonateList
         public ActionResult Index(int? id, int? page)
         {

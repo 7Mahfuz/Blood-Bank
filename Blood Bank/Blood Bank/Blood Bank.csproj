@@ -306,6 +306,7 @@
     <Content Include="Views\Request\AllRequests.cshtml" />
     <Content Include="Views\Request\MyRequests.cshtml" />
     <Content Include="Views\UserAccount\ChangePassword.cshtml" />
+    <Content Include="Views\DonateList\DonorList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
