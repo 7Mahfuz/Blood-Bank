@@ -24,13 +24,13 @@
                     @{
         if (Session["UserName"] != null)
         {
-                <li>@Html.ActionLink("Requests", "Index", "Home")</li>
+                <li>@Html.ActionLink("Requests", "AllRequests", "Request")</li>
                 <li>@Html.ActionLink("My Donate lists", "Index", "DonateList")</li>
                 <li>@Html.ActionLink("Make a Request", "Add", "Request")</li>
 }
 else
 {
-                <li>@Html.ActionLink("Requests", "Index", "Home")</li>
+                <li>@Html.ActionLink("Requests", "AllRequests", "Request")</li>
 }
                     }
 

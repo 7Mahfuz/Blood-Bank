@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using PagedList;
 namespace Blood_Bank.Controllers
 {
     public class RequestController : Controller
@@ -20,15 +20,16 @@ namespace Blood_Bank.Controllers
             this.uow = _uow;
         }
         // GET: Request
-        public ActionResult AllRequests()
+        public ActionResult AllRequests(int? page)
         {
             //string UserName = Session["UserName"].ToString();
             //User user = uow.Repository<User>().GetModel(x => x.UserName == UserName);
             var model = uow.Repository<Request>().GetList();
-            return View(model);
+            var obj=model.ToList().ToPagedList(page ?? 1,2);
+            return View(obj);
         }
 
-        public ActionResult MyRequests(int? id)
+        public ActionResult MyRequests(int? id, int? page)
         {
             string UserName = Session["UserName"].ToString();
             User user = uow.Repository<User>().GetModel(x => x.UserName == UserName);

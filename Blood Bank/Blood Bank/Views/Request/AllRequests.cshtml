@@ -1,4 +1,7 @@
-﻿@model IEnumerable<DataLayer.Request>
+﻿@using PagedList;
+@using PagedList.Mvc;
+
+@model IPagedList<DataLayer.Request>
 
 @{
     ViewBag.Title = "AllRequests";
@@ -9,21 +12,21 @@
 
 <table class="table">
     <tr>
-        \
+        
         <th>
-            @Html.DisplayNameFor(model => model.Blood)
+            @Html.DisplayNameFor(model => model.First().Blood)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(model => model.First().Description)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.GotBlood)
+            @Html.DisplayNameFor(model => model.First().GotBlood)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PostDate)
+            @Html.DisplayNameFor(model => model.First().PostDate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.BloodNeed)
+            @Html.DisplayNameFor(model => model.First().BloodNeed)
         </th>
         <th></th>
     </tr>
@@ -55,3 +58,4 @@
 }
 
 </table>
+@Html.PagedListPager(Model, page => Url.Action("AllRequests", new { page}))

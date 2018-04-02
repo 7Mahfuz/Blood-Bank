@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using PagedList.Mvc;
 namespace Blood_Bank.Controllers
 {
     public class DonateListController : Controller
@@ -20,7 +20,7 @@ namespace Blood_Bank.Controllers
             this.uow = _uow;
         }
         // GET: DonateList
-        public ActionResult Index(int? id)
+        public ActionResult Index(int? id, int? page)
         {
             string UserName = Session["UserName"].ToString();
             User user = uow.Repository<User>().GetModel(x => x.UserName == UserName);
