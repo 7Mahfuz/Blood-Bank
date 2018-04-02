@@ -20,11 +20,20 @@ namespace Blood_Bank.Controllers
             this.uow = _uow;
         }
 
-        public ActionResult DonorList(int? page)
+        public ActionResult DonorList(string Search, int? page)
         {
-            var model = uow.Repository<User>().GetList();
-            var obj = model.ToList().ToPagedList(page ?? 1, 10);
-            return View(obj);
+            if (Search == null)
+            {
+                var model = uow.Repository<User>().GetList();
+                var obj = model.ToList().ToPagedList(page ?? 1, 10);
+                return View(obj);
+            }
+            else
+            {
+                var model = uow.Repository<User>().GetList(x => x.Blood == Search);
+                var obj = model.ToList().ToPagedList(page ?? 1, 10);
+                return View(obj);
+            }
         }
 
 

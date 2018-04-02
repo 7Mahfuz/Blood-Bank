@@ -7,9 +7,9 @@
 }
 
 <h2>DonorList</h2>
-
-    <input type="button" value="Search" />
-
+@using (Html.BeginForm("DonorList", "DonateList", FormMethod.Get))
+{  
+<div class="control-label col-md-2">
     @Html.DropDownList("Search", new List<SelectListItem>
 {
 new SelectListItem{ Text="A(+) positive", Value = "A(+) positive" },
@@ -22,7 +22,10 @@ new SelectListItem{ Text="O(+) positive", Value = "O(+) positive" },
 new SelectListItem{ Text="O(-) negative", Value = "O(-) negative" },
 
 }, new { @class = "form-control" })
+</div>
 
+<input type="submit" value="Search" class="btn btn-primary btn-large"/>
+}
 <table class="table">
     <tr>
         <th>

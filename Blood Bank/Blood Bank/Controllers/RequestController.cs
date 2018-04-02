@@ -20,13 +20,24 @@ namespace Blood_Bank.Controllers
             this.uow = _uow;
         }
         // GET: Request
-        public ActionResult AllRequests(int? page)
+        public ActionResult AllRequests(string Search,int? page)
         {
             //string UserName = Session["UserName"].ToString();
             //User user = uow.Repository<User>().GetModel(x => x.UserName == UserName);
-            var model = uow.Repository<Request>().GetList();
-            var obj=model.ToList().ToPagedList(page ?? 1,2);
-            return View(obj);
+            if(Search==null)
+            {
+                var model = uow.Repository<Request>().GetList();
+                var obj = model.ToList().ToPagedList(page ?? 1, 2);
+                return View(obj);
+            }
+            else
+            {
+                var model = uow.Repository<Request>().GetList(x=>x.Blood==Search);
+                var obj = model.ToList().ToPagedList(page ?? 1, 2);
+                return View(obj);
+            }
+
+            
         }
 
         public ActionResult MyRequests(int? id, int? page)

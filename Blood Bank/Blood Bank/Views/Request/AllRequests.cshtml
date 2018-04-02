@@ -8,11 +8,29 @@
 }
 
 <h2>AllRequests</h2>
+@using (Html.BeginForm("AllRequests", "Request", FormMethod.Get))
+{
+    <div class="control-label col-md-2">
+        @Html.DropDownList("Search", new List<SelectListItem>
+{
+new SelectListItem{ Text="A(+) positive", Value = "A(+) positive" },
+new SelectListItem{ Text="A(-) negative", Value = "A(-) negative" },
+new SelectListItem{ Text="B(+) positive", Value = "B(+) positive" },
+new SelectListItem{ Text="B(-) negative", Value = "B(-) negative" },
+new SelectListItem{ Text="AB(+) positive", Value = "AB(+) positive" },
+new SelectListItem{ Text="AB(-) negative", Value = "AB(-) negative" },
+new SelectListItem{ Text="O(+) positive", Value = "O(+) positive" },
+new SelectListItem{ Text="O(-) negative", Value = "O(-) negative" },
 
+}, new { @class = "form-control" })
+    </div>
+
+    <input type="submit" value="Search" class="btn btn-primary btn-large" />
+}
 
 <table class="table">
     <tr>
-        
+
         <th>
             @Html.DisplayNameFor(model => model.First().Blood)
         </th>
@@ -31,31 +49,32 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        
-        <td>
-            @Html.DisplayFor(modelItem => item.Blood)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GotBlood)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PostDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BloodNeed)
-        </td>
-        <td>
-            
-            @Html.ActionLink("Details", "Details", new { id=item.id })|
-           
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Blood)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GotBlood)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BloodNeed)
+            </td>
+            <td>
+
+                @Html.ActionLink("Details", "Details", new { id = item.id })|
+
+            </td>
+        </tr>
+    }
 
 </table>
-@Html.PagedListPager(Model, page => Url.Action("AllRequests", new { page}))
+@Html.PagedListPager(Model, page => Url.Action("AllRequests", new { page }))
