@@ -54,11 +54,12 @@ namespace Blood_Bank.Controllers
         public ActionResult Register(Register model)
         {
             int a=uow.Repository<User>().Count(x => x.UserName == model.UserName);
-            if(a>0)
+            if (a > 0)
             {
-                ViewBag.Exist = "This User Name Already Exist";
+                ViewBag.Exist = "Yes";
                 return View(model);
             }
+            else ViewBag.Exist = "No";
 
 
             if (ModelState.IsValid)

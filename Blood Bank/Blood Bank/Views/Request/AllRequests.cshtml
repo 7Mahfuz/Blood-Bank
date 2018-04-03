@@ -7,7 +7,7 @@
     ViewBag.Title = "AllRequests";
 }
 
-<h2>AllRequests</h2>
+<h2>Requests , People rececntly made</h2>
 @using (Html.BeginForm("AllRequests", "Request", FormMethod.Get))
 {
     <div class="control-label col-md-2">
@@ -27,7 +27,7 @@ new SelectListItem{ Text="O(-) negative", Value = "O(-) negative" },
 
     <input type="submit" value="Search" class="btn btn-primary btn-large" />
 }
-
+    <br />
 <table class="table">
     <tr>
 
@@ -68,13 +68,9 @@ new SelectListItem{ Text="O(-) negative", Value = "O(-) negative" },
             <td>
                 @Html.DisplayFor(modelItem => item.BloodNeed)
             </td>
-            <td>
-
-                @Html.ActionLink("Details", "Details", new { id = item.id })|
-
-            </td>
+           
         </tr>
     }
 
 </table>
-@Html.PagedListPager(Model, page => Url.Action("AllRequests", new { page }))
+@Html.PagedListPager(Model, page => Url.Action("AllRequests", new { page,Search = Request.QueryString["Search"] }))

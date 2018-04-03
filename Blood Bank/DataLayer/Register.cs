@@ -10,6 +10,7 @@ namespace DataLayer
     public class Register
     {
        public string UserName { get; set; }
+        [EmailAddress]
         public string Email { get; set; }
         [DataType(DataType.Date)]
         public DateTime Birthdate { get; set; }

@@ -26,14 +26,14 @@ namespace Blood_Bank.Controllers
             //User user = uow.Repository<User>().GetModel(x => x.UserName == UserName);
             if(Search==null)
             {
-                var model = uow.Repository<Request>().GetList();
-                var obj = model.ToList().ToPagedList(page ?? 1, 2);
+                var model = uow.Repository<Request>().GetList(x=>x.GotBlood=="NO");
+                var obj = model.OrderByDescending(x=>x.BloodNeed).ToList().ToPagedList(page ?? 1, 10);
                 return View(obj);
             }
             else
             {
                 var model = uow.Repository<Request>().GetList(x=>x.Blood==Search);
-                var obj = model.ToList().ToPagedList(page ?? 1, 2);
+                var obj = model.OrderByDescending(x => x.BloodNeed).ToList().ToPagedList(page ?? 1, 10);
                 return View(obj);
             }
 

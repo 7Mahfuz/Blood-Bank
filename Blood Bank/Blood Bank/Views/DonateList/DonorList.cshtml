@@ -6,11 +6,11 @@
     ViewBag.Title = "DonorList";
 }
 
-<h2>DonorList</h2>
+<h2>Registerd Donors</h2>
 @using (Html.BeginForm("DonorList", "DonateList", FormMethod.Get))
-{  
-<div class="control-label col-md-2">
-    @Html.DropDownList("Search", new List<SelectListItem>
+{
+    <div class="control-label col-md-2">
+        @Html.DropDownList("Search", new List<SelectListItem>
 {
 new SelectListItem{ Text="A(+) positive", Value = "A(+) positive" },
 new SelectListItem{ Text="A(-) negative", Value = "A(-) negative" },
@@ -22,10 +22,11 @@ new SelectListItem{ Text="O(+) positive", Value = "O(+) positive" },
 new SelectListItem{ Text="O(-) negative", Value = "O(-) negative" },
 
 }, new { @class = "form-control" })
-</div>
+    </div>
 
-<input type="submit" value="Search" class="btn btn-primary btn-large"/>
+    <input type="submit" value="Search" class="btn btn-primary btn-large" />
 }
+<br>
 <table class="table">
     <tr>
         <th>
@@ -48,12 +49,12 @@ new SelectListItem{ Text="O(-) negative", Value = "O(-) negative" },
         <th>
             @Html.DisplayNameFor(model => model.First().PhoneNumber)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().RelativePhoneNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().Relative)
-        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.First().RelativePhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Relative)
+            </th>*@
 
         <th></th>
     </tr>
@@ -64,7 +65,7 @@ new SelectListItem{ Text="O(-) negative", Value = "O(-) negative" },
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
-            
+
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
@@ -77,21 +78,34 @@ new SelectListItem{ Text="O(-) negative", Value = "O(-) negative" },
             <td>
                 @Html.DisplayFor(modelItem => item.PreferedArea)
             </td>
-           
+
             <td>
-                @Html.DisplayFor(modelItem => item.PhoneNumber)
+                @{
+                    if (item.Show == "Relative Number")
+                    {
+                        @Html.DisplayFor(modelItem => item.RelativePhoneNumber);
+                        <p>Relative ( @Html.DisplayFor(m => item.Relative) )</p>
+                    }
+                    else if (item.Show == "My Number")
+                    {
+                        @Html.DisplayFor(modelItem => item.PhoneNumber);
+                    }
+                    else
+                    {
+                        Html.Display("Number not Given");
+                    }
+                }
+
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RelativePhoneNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Relative)
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.RelativePhoneNumber)
+                </td>*@
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Relative)*@
+
             
-            <td>
-                @Html.ActionLink("Details", "Details", new { id = item.Id })
-            </td>
         </tr>
     }
 
 </table>
-@Html.PagedListPager(Model, page => Url.Action("AllRequests", new { page }))
+@Html.PagedListPager(Model, page => Url.Action("AllRequests", new { page, Search = Request.QueryString["Search"] }))

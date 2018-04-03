@@ -62,8 +62,17 @@ namespace Blood_Bank.Logics
 
         public int Count(Func<T, bool> predicate = null)
         {
-            int x = _DbSet.Count(predicate);
-            return x;
+
+            if (predicate == null)
+            {
+                int x = _DbSet.Count();
+                return x;
+            }
+            else
+            {
+                int x = _DbSet.Count(predicate);
+                return x;
+            }
         }
         
 

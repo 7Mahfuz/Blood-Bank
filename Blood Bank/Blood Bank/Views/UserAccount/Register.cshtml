@@ -4,7 +4,7 @@
     ViewBag.Title = "Register";
 }
 
-<h2>Register</h2>
+<h2>Registration</h2>
 
 
 @using (Html.BeginForm()) 
@@ -12,9 +12,13 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Register</h4>
+        
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @{ 
+            if (ViewBag.Exist == "Yes")
+            { <p>User Name already exists</p>}
+        }
         <div class="form-group">
             @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -86,9 +90,7 @@ new SelectListItem{ Text="O(-) negative", Value = "O(-) negative" },
        
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

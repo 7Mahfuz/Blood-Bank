@@ -4,10 +4,10 @@
     ViewBag.Title = "MyRequests";
 }
 
-<h2>MyRequests</h2>
+<h2>All Requests You have made</h2>
 
 <p>
-    @Html.ActionLink("Make another Requset", "Add")
+    @Html.ActionLink("Make another Requset", "Add",null, new { @class = "btn btn-primary btn-suscces" })
 </p>
 <table class="table">
     <tr>
@@ -49,9 +49,9 @@
             @Html.DisplayFor(modelItem => item.BloodNeed)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }, new { @class = "btn btn-warning btn-sm" }) 
             
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            @Html.ActionLink("Delete", "Delete", new { id=item.id }, new { @class = "btn btn-danger btn-sm" })
         </td>
     </tr>
 }
