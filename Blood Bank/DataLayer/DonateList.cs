@@ -13,8 +13,8 @@ namespace DataLayer
         public int id { get; set; }
 
         public int UserId { get; set; }
-        
 
+        [Display(Name = "Patient/Reciever")]
         public string Reciever { get; set; }
         public string Disease { get; set; }
         public string Hospital { get; set; }

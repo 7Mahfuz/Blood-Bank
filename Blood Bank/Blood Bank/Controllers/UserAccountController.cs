@@ -114,17 +114,19 @@ namespace Blood_Bank.Controllers
                 User user = uow.Repository<User>().GetModel(x => x.UserName == model.UserName);
                 if(user.Email==model.Email)
                 {
-                    if(model.Password==model.ConfirmPassword)
+                    if (model.Password == model.ConfirmPassword)
                     {
                         user.Password = model.Password;
                         uow.Repository<User>().UpdateModel(user);
                         uow.Save();
                     }
+                    else ViewBag.Msg = " Both Passwords didn'y match";
                 }
+                else ViewBag.Msg = "Email doesn't match for User";
             }
             else
             {
-
+               ViewBag.Msg = "No Such User Name exists";
             }
 
             return View(model);

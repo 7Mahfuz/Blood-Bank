@@ -12,10 +12,12 @@ namespace DataLayer
         [Key]
         public int Id { get; set; }
         [Required]
+        [Display(Name = "Full Name")]
         public string Name { get; set; }
-       
+        [Display(Name = "User Name")]
         public string UserName { get; set; }
-        
+        [EmailAddress]
+        [Display(Name = "Email")]
         public string Email { get; set; }
        
         public string Blood { get; set; }

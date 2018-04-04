@@ -14,12 +14,14 @@ namespace DataLayer
 
         public int UserId { get; set; }
 
-
+        [Display(Name = "Blood Needed")]
         public string Blood { get; set; }
 
+        [Display(Name = "Contact Description")]
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
+        [Display(Name = "Did you got the blood?")]
         public string GotBlood { get; set; }
 
         [DataType(DataType.Date)]
